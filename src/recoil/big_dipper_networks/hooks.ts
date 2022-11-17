@@ -27,7 +27,7 @@ const LAVA_NETWORK_TESTNET = [
     links: [
       {
         name: 'Testnet',
-        chain_id: 'lava-1',
+        chain_id: 'lava-testnet',
         url: 'http://bd.lavanet.xyz/',
       },
     ],
