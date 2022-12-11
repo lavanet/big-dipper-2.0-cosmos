@@ -13,24 +13,19 @@ export const socialMediaLinks: {
   url: string;
 }[] = [
   {
-    component: <TelegramIcon />,
-    className: 'telegram',
-    url: 'https://t.me/forbole',
-  },
-  {
     component: <LinkedinIcon />,
     className: 'linkedin',
-    url: 'https://www.linkedin.com/company/forbole',
+    url: 'https://www.linkedin.com/company/lava-network/',
   },
   {
     component: <TwitterIcon />,
     className: 'twitter',
-    url: 'https://twitter.com/bigdipperlive',
+    url: 'https://twitter.com/lavanetxyz',
   },
   {
     component: <GithubIcon />,
     className: 'github',
-    url: 'https://github.com/forbole',
+    url: 'https://github.com/lavanet',
   },
   {
     component: <DiscordIcon />,
