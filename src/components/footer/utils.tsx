@@ -42,17 +42,4 @@ export const footerLinks = [
       },
     ],
   },
-  // {
-  //   key: '',
-  //   links: [
-  //     {
-  //       key: 'About',
-  //       url: LAVA_NET_URL,
-  //     },
-  //     {
-  //       key: 'Docs',
-  //       url: LAVA_NET_DOCS_URL,
-  //     },
-  //   ],
-  // },
 ];
