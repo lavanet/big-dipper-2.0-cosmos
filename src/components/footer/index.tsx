@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import Trans from 'next-translate/Trans';
 import { useRecoilValue } from 'recoil';
 import useTranslation from 'next-translate/useTranslation';
-import { Button, Divider, Typography } from '@material-ui/core';
+import { Divider, Typography } from '@material-ui/core';
 import { chainConfig, generalConfig } from '@src/configs';
 import { readTheme } from '@recoil/settings/selectors';
 import Image from 'next/image';
