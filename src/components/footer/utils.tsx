@@ -1,5 +1,9 @@
-const FORBOLE_URL = 'https://www.forbole.com';
+const LAVA_NET_URL = 'https://www.lavanet.xyz';
 const BIG_DIPPER_URL = 'https://bigdipper.live';
+const LAVA_NET_DOCS_URL = 'https://docs.lavanet.xyz/';
+const LAVA_PRIVATE_TEST_NET_URL = 'https://discord.com/channels/963778337904427018/1021420207740293151';
+const LAVA_INFO_URL = 'https://info.lavanet.xyz/';
+const LAVA_GATEWAY_URL = 'https://gateway.lavanet.xyz/';
 
 export const donateLink = {
   key: 'donate',
@@ -8,44 +12,32 @@ export const donateLink = {
 
 export const footerLinks = [
   {
-    key: 'company',
+    key: 'Lava',
     links: [
       {
-        key: 'forbole',
-        url: FORBOLE_URL,
+        key: 'About',
+        url: LAVA_NET_URL,
       },
       {
-        key: 'stakeNow',
-        url: `${FORBOLE_URL}/stake-now`,
+        key: 'Docs',
+        url: LAVA_NET_DOCS_URL,
       },
       {
-        key: 'contact',
-        url: `${FORBOLE_URL}/contact`,
-      },
-      {
-        key: 'blog',
-        url: `${FORBOLE_URL}/blog`,
+        key: 'Private Testnet',
+        url: LAVA_PRIVATE_TEST_NET_URL,
       },
     ],
   },
   {
-    key: 'bigDipper',
+    key: 'Products',
     links: [
       {
-        key: 'about',
-        url: `${BIG_DIPPER_URL}/#about`,
+        key: 'Lava Info',
+        url: LAVA_INFO_URL,
       },
       {
-        key: 'faq',
-        url: `${BIG_DIPPER_URL}/faq`,
-      },
-      {
-        key: 'termsAndConditions',
-        url: `${BIG_DIPPER_URL}/terms-and-conditions`,
-      },
-      {
-        key: 'privacyPolicy',
-        url: `${BIG_DIPPER_URL}/privacy-policy`,
+        key: 'Lava Gateway',
+        url: LAVA_GATEWAY_URL,
       },
     ],
   },

@@ -1,9 +1,11 @@
 {
-  "title": "Lava Block Explorer",
+  "title": "Block Explorer",
   "network": "lava-testnet-1",
   "icon": "/icons/lava-icon.svg",
+  "footer_sub_logo_text": "Lava Block Explorer",
   "logo": {
-    "default": "/icons/lava-logo-white.svg"
+    "default": "/icons/lava-logo-white.svg",
+    "text_black": "/icons/lava-logo-text-black.svg"
   },
   "prefix": {
     "consensus": "lava@valcons",

@@ -8,9 +8,7 @@ import { useApollo } from '@src/graphql/client';
 import { chainConfig } from '@configs';
 import { useWindowOrigin } from '@hooks';
 import { Main } from './components';
-import {
-  useApp,
-} from './hooks';
+import { useApp } from './hooks';
 import {
   OPEN_GRAPH_SEO,
   TWITTER_SEO,
@@ -18,6 +16,7 @@ import {
   ADDITIONAL_META_TAGS,
 } from './utils';
 
+const LAVA = 'Lava';
 function App(props: AppProps) {
   useApp();
   const { pageProps } = props;
@@ -29,10 +28,10 @@ function App(props: AppProps) {
     <>
       <DefaultSeo
         titleTemplate={`%s | ${chainConfig.title}`}
-        title={t('common:bigDipper')}
+        title={LAVA}
         description={t('common:description')}
         openGraph={{
-          title: `${t('common:bigDipper')} | ${chainConfig.title}`,
+          title: `${LAVA} ${chainConfig.title}`,
           description: t('common:description'),
           url: location,
           ...OPEN_GRAPH_SEO,
@@ -41,9 +40,7 @@ function App(props: AppProps) {
         additionalLinkTags={ADDITIONAL_LINK_TAGS_SEO}
         additionalMetaTags={ADDITIONAL_META_TAGS}
       />
-      <ApolloProvider
-        client={apolloClient}
-      >
+      <ApolloProvider client={apolloClient}>
         <RecoilRoot>
           <Main {...props} />
         </RecoilRoot>
