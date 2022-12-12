@@ -8,7 +8,7 @@ import { chainConfig, generalConfig } from '@src/configs';
 import { readTheme } from '@recoil/settings/selectors';
 import Image from 'next/image';
 import { SocialMedia } from './components';
-import { footerLinks, donateLink } from './utils';
+import { footerLinks } from './utils';
 import { useStyles } from './styles';
 
 const Footer: React.FC<{ className?: string }> = ({ className }) => {
