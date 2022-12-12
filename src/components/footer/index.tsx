@@ -3,8 +3,12 @@ import classnames from 'classnames';
 import Trans from 'next-translate/Trans';
 import { useRecoilValue } from 'recoil';
 import useTranslation from 'next-translate/useTranslation';
-import { Divider, Typography } from '@material-ui/core';
-import { chainConfig, generalConfig } from '@src/configs';
+import {
+  Divider, Typography,
+} from '@material-ui/core';
+import {
+  chainConfig, generalConfig,
+} from '@src/configs';
 import { readTheme } from '@recoil/settings/selectors';
 import Image from 'next/image';
 import { SocialMedia } from './components';
@@ -37,7 +41,9 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
           ) : (
             <Image src="/icons/lava-logo-white.svg" height={50} width={150} />
           )}
-          <p className="footer__slogan">Lava {chainConfig.title}</p>
+          <p className="footer__slogan">
+            {chainConfig.footer_sub_logo_text}
+          </p>
         </div>
         {/* ============================= */}
         {/* links */}
@@ -99,7 +105,8 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
             values={{
               name: generalConfig.maintainer.name,
             }}
-          />{' '}
+          />
+          {' '}
           {year}
         </Typography>
         <Typography className="footer__closing--text">

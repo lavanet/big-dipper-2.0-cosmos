@@ -13,7 +13,9 @@ import { formatMarket } from './utils';
 const TitleBar: React.FC<{
   className?: string;
   title: string;
-}> = ({ className, title }) => {
+}> = ({
+  className, title,
+}) => {
   const theme = useRecoilValue(readTheme);
   const { t } = useTranslation('common');
   const classes = useStyles();

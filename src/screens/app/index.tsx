@@ -15,6 +15,7 @@ import {
   ADDITIONAL_LINK_TAGS_SEO,
   ADDITIONAL_META_TAGS,
 } from './utils';
+
 const LAVA = 'Lava';
 function App(props: AppProps) {
   useApp();
