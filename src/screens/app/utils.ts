@@ -2,7 +2,7 @@ import { generalConfig } from '@configs';
 
 export const OPEN_GRAPH_SEO = {
   type: 'website',
-  site_name: 'Big Dipper',
+  site_name: 'Lava',
   images: [
     {
       url: generalConfig.previewImage,

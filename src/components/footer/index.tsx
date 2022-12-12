@@ -37,7 +37,7 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
           ) : (
             <Image src="/icons/lava-logo-white.svg" height={50} width={150} />
           )}
-          <p className="footer__slogan">{chainConfig.title}</p>
+          <p className="footer__slogan">Lava {chainConfig.title}</p>
         </div>
         {/* ============================= */}
         {/* links */}
@@ -72,15 +72,6 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
               <p className="footer__donate--excerpt">
                 {t('common:donateExcerpt')}
               </p>
-              <a href={donateLink.url} target="_blank" rel="noreferrer">
-                <Button
-                  className="footer__donate-button"
-                  variant="contained"
-                  color="primary"
-                >
-                  {t('common:donate')}
-                </Button>
-              </a>
             </div>
           </div>
         </div>
