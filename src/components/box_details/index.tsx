@@ -49,11 +49,11 @@ const BoxDetails: React.FC<{
 
             {React.isValidElement(x.detail) ? (
               <div className="detail">
-                {x.detail.key === 'ulava' ? 'lava' : x.detail}
+                {x.detail}
               </div>
             ) : (
               <Typography variant="body1" className="detail">
-                {x.detail === 'ulava' ? 'lava' : x.detail}
+                {x.detail}
               </Typography>
             )}
           </div>
