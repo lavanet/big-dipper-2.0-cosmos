@@ -20,7 +20,7 @@
   "votingPowerTokenUnit": "ulava",
   "tokenUnits": {
     "ulava": {
-      "display": "ulava",
+      "display": "lava",
       "exponent": 6
     }
   },
