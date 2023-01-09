@@ -50,11 +50,11 @@ jobs:
           docker buildx build \
             -t $REGISTRY/bd-ui:$IMAGE_TAG \
             -t $REGISTRY/bd-ui:latest \
-            --build-arg NEXT_PUBLIC_GRAPHQL_URL=https://bd-hasura.lavanet.xyz/v1/graphql \
-            --build-arg NEXT_PUBLIC_GRAPHQL_WS=wss://bd-hasura.lavanet.xyz/v1/graphql \
+            --build-arg NEXT_PUBLIC_GRAPHQL_URL=https://bd-graphql.lavanet.xyz/v1/graphql \
+            --build-arg NEXT_PUBLIC_GRAPHQL_WS=wss://bd-graphql.lavanet.xyz/v1/graphql \
             --build-arg NODE_ENV=production \
             --build-arg PORT=3000 \
-            --build-arg NEXT_PUBLIC_WS_CHAIN_URL=ws://54.144.69.182:26657/websocket \
+            --build-arg NEXT_PUBLIC_WS_CHAIN_URL=ws://44.205.140.46:26657/websocket \
             --build-arg NEXT_PUBLIC_CHAIN_TYPE=testnet \
             --build-arg NEXT_PUBLIC_BLOCK_TOSTER_INTERVAL_INS=300 \
             --platform linux/amd64 \
