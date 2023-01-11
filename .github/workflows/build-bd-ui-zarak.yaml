@@ -48,8 +48,8 @@ jobs:
           IMAGE_TAG: ${{ github.sha }}
         run: |
           docker buildx build \
-            -t $REGISTRY/bd-ui:$IMAGE_TAG \
-            -t $REGISTRY/bd-ui:latest \
+            -t $REGISTRY/bd-ui-zarak:$IMAGE_TAG \
+            -t $REGISTRY/bd-ui-zarak:latest \
             --build-arg NEXT_PUBLIC_GRAPHQL_URL=https://bd-graphql.lavanet.xyz/v1/graphql \
             --build-arg NEXT_PUBLIC_GRAPHQL_WS=wss://bd-graphql.lavanet.xyz/v1/graphql \
             --build-arg NODE_ENV=production \
