@@ -54,7 +54,7 @@ jobs:
             --build-arg NEXT_PUBLIC_GRAPHQL_WS=wss://bd-graphql.lava-cybertron.xyz/v1/graphql \
             --build-arg NODE_ENV=production \
             --build-arg PORT=3000 \
-            --build-arg NEXT_PUBLIC_WS_CHAIN_URL=wss://public-rpc.lava-cybertron.xyz/rpc/ \
+            --build-arg NEXT_PUBLIC_WS_CHAIN_URL=wss://public-rpc.lava-cybertron.xyz/rpc/websocket \
             --build-arg NEXT_PUBLIC_CHAIN_TYPE=testnet \
             --build-arg NEXT_PUBLIC_BLOCK_TOSTER_INTERVAL_INS=300 \
             --platform linux/amd64 \
