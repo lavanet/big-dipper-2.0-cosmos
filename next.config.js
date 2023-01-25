@@ -5,9 +5,22 @@
 const { withSentryConfig } = require('@sentry/nextjs');
 const nextTranslate = require('next-translate');
 
+// const assetsUrl = {
+//   images: {
+//     domains: [
+//       'lava-fe-assets.s3.amazonaws.com',
+//     ],
+//   },
+// };
+
 const moduleExports = nextTranslate({
   poweredByHeader: false,
   basePath: '',
+  images: {
+    domains: [
+      'lava-fe-assets.s3.amazonaws.com',
+    ],
+  },
   webpack: (config) => {
     config.module.rules.push({
       test: /\.svg$/,

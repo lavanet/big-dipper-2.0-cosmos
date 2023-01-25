@@ -22,8 +22,8 @@ import {
 const LAVA_NETWORK_TESTNET = [
   {
     name: 'Lava',
-    logo: '/icons/lava-icon.svg',
-    cover: '/icon/lava-icon.svg',
+    logo: process.env.NEXT_PUBLIC_LAVA_LOGO_URL,
+    cover: process.env.NEXT_PUBLIC_LAVA_LOGO_URL,
     links: [
       {
         name: 'Testnet',

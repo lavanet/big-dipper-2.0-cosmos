@@ -24,7 +24,8 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
   // Footer
   // ============================
   const year = new Date().getFullYear();
-
+  const lavaBlackLogo = process.env.NEXT_PUBLIC_LAVA_BLACK_LOGO_URL;
+  const lavaWhiteLogo = process.env.NEXT_PUBLIC_LAVA_WHITE_LOGO_URL;
   return (
     <div className={classnames(className, classes.root)}>
       <div className={classnames('footer')}>
@@ -33,13 +34,9 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
         {/* ============================= */}
         <div className="footer__logo--container">
           {theme === 'light' ? (
-            <Image
-              src="/icons/lava-logo-text-black.svg"
-              height={50}
-              width={150}
-            />
+            lavaBlackLogo && <Image src={lavaBlackLogo} height={50} width={150} />
           ) : (
-            <Image src="/icons/lava-logo-white.svg" height={50} width={150} />
+            lavaWhiteLogo && <Image src={lavaWhiteLogo} height={50} width={150} />
           )}
           <p className="footer__slogan">
             {chainConfig.footer_sub_logo_text}
