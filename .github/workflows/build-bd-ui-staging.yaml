@@ -60,6 +60,10 @@ jobs:
             --build-arg NEXT_PUBLIC_WS_CHAIN_URL=wss://public-rpc.lava-cybertron.xyz/rpc/websocket \
             --build-arg NEXT_PUBLIC_CHAIN_TYPE=testnet \
             --build-arg NEXT_PUBLIC_BLOCK_TOSTER_INTERVAL_INS=300 \
+            --build-arg NEXT_PUBLIC_LAVA_FAVICON_URL=https://lava-fe-assets.s3.amazonaws.com/lava-favicon.ico \
+            --build-arg NEXT_PUBLIC_LAVA_LOGO_URL=https://lava-fe-assets.s3.amazonaws.com/lava-icon.svg \
+            --build-arg NEXT_PUBLIC_LAVA_BLACK_LOGO_URL=https://lava-fe-assets.s3.amazonaws.com/lava-logo-black.svg \
+            --build-arg NEXT_PUBLIC_LAVA_WHITE_LOGO_URL=https://lava-fe-assets.s3.amazonaws.com/lava-logo-with-text-white.svg \
             --platform linux/amd64 \
             --cache-from="type=local,src=/tmp/.buildx-cache" \
             --cache-to="type=local,dest=/tmp/.buildx-cache-new"  \
