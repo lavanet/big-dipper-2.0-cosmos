@@ -8,6 +8,11 @@ const nextTranslate = require('next-translate');
 const moduleExports = nextTranslate({
   poweredByHeader: false,
   basePath: '',
+  images: {
+    domains: [
+      'lava-fe-assets.s3.amazonaws.com',
+    ],
+  },
   webpack: (config) => {
     config.module.rules.push({
       test: /\.svg$/,

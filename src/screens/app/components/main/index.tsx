@@ -41,7 +41,7 @@ const Main = (props: AppProps) => {
   return (
     <>
       <Head>
-        <link rel="icon" href="/icons/lava-favicon.ico" />
+        <link rel="icon" href={process.env.NEXT_PUBLIC_LAVA_FAVICON_URL} />
       </Head>
       <ThemeProvider theme={muiTheme}>
         <CssBaseline />
