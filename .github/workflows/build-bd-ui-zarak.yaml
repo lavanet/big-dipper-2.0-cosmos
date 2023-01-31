@@ -34,6 +34,11 @@ jobs:
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v1
 
+      - name: Set up NOW environment variable
+        id: "env-now"
+        run: |
+          echo "NOW=$(date +'%Y%m%dT%H%M%S')" >> $GITHUB_ENV
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
 
@@ -52,6 +57,7 @@ jobs:
         run: |
           docker buildx build \
             -t $REGISTRY/bd-ui-zarak:$IMAGE_TAG \
+            -t $REGISTRY/bd-ui-zarak:$IMAGE_TAG-$NOW \
             -t $REGISTRY/bd-ui-zarak:latest \
             --build-arg NEXT_PUBLIC_GRAPHQL_URL=https://bd-graphql.lavanet.xyz/v1/graphql \
             --build-arg NEXT_PUBLIC_GRAPHQL_WS=wss://bd-graphql.lavanet.xyz/v1/graphql \
