@@ -54,16 +54,17 @@ jobs:
         env:
           REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           IMAGE_TAG: ${{ github.sha }}
+          NOW: ${{ env.NOW }}
         run: |
           docker buildx build \
             -t $REGISTRY/bd-ui:$IMAGE_TAG \
             -t $REGISTRY/bd-ui:latest \
             -t $REGISTRY/bd-ui:$IMAGE_TAG-$NOW \
-            --build-arg NEXT_PUBLIC_GRAPHQL_URL=https://bd-graphql.lava-cybertron.xyz/v1/graphql \
-            --build-arg NEXT_PUBLIC_GRAPHQL_WS=wss://bd-graphql.lava-cybertron.xyz/v1/graphql \
+            --build-arg NEXT_PUBLIC_GRAPHQL_URL=https://bd-graphql.{{ secrets.STAGING_DOMAIN }}/v1/graphql \
+            --build-arg NEXT_PUBLIC_GRAPHQL_WS=wss://bd-graphql.{{ secrets.STAGING_DOMAIN }}/v1/graphql \
             --build-arg NODE_ENV=production \
             --build-arg PORT=3000 \
-            --build-arg NEXT_PUBLIC_WS_CHAIN_URL=wss://public-rpc.lava-cybertron.xyz/rpc/websocket \
+            --build-arg NEXT_PUBLIC_WS_CHAIN_URL=wss://public-rpc.{{ secrets.STAGING_DOMAIN }}/rpc/websocket \
             --build-arg NEXT_PUBLIC_CHAIN_TYPE=testnet \
             --build-arg NEXT_PUBLIC_BLOCK_TOSTER_INTERVAL_INS=300 \
             --platform linux/amd64 \

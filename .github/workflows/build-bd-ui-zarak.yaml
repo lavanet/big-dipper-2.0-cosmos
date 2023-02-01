@@ -54,6 +54,7 @@ jobs:
         env:
           REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           IMAGE_TAG: ${{ github.sha }}
+          NOW: ${{ env.NOW }}
         run: |
           docker buildx build \
             -t $REGISTRY/bd-ui-zarak:$IMAGE_TAG \
