@@ -9,6 +9,7 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+
 permissions:
   id-token: write
   contents: read
@@ -71,6 +72,7 @@ jobs:
             --build-arg NEXT_PUBLIC_LAVA_LOGO_URL=https://lava-fe-assets.s3.amazonaws.com/lava-icon.svg \
             --build-arg NEXT_PUBLIC_LAVA_BLACK_LOGO_URL=https://lava-fe-assets.s3.amazonaws.com/lava-logo-black.svg \
             --build-arg NEXT_PUBLIC_LAVA_WHITE_LOGO_URL=https://lava-fe-assets.s3.amazonaws.com/lava-logo-with-text-white.svg \
+            --build-arg NEXT_PUBLIC_GOOGLE_ANALYTICS=G-CEXCQSV6TZ \
             --platform linux/amd64 \
             --cache-from="type=local,src=/tmp/.buildx-cache" \
             --cache-to="type=local,dest=/tmp/.buildx-cache-new"  \

@@ -17,6 +17,7 @@ import {
 } from './utils';
 
 const LAVA = 'Lava';
+
 function App(props: AppProps) {
   useApp();
   const { pageProps } = props;
