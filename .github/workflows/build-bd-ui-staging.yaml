@@ -64,7 +64,7 @@ jobs:
 
       - name: Build, tag, and push docker image to Amazon ECR
         env:
-          REGISTRY: "us-central1-docker.pkg.dev/lavanet-staging/growth-staging-us-central1/bd-ui"
+          REGISTRY: "us-central1-docker.pkg.dev/lavanet-staging/growth-staging-us-central1/bd-ui-staging"
           IMAGE_TAG: ${{ github.sha }}
           NOW: ${{ env.NOW }}
         run: |

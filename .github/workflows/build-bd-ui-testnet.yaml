@@ -1,5 +1,5 @@
 # This is a basic workflow to help you get started with Actions
-name: Build Big Dipper UI (Zarak)
+name: Build Big Dipper UI (Testnet)
 
 # Controls when the workflow will run
 on:
@@ -63,7 +63,7 @@ jobs:
 
       - name: Build, tag, and push docker image to Amazon ECR
         env:
-          REGISTRY: "us-central1-docker.pkg.dev/lavanet-testnet/growth-testnet-us-central1/bd-ui-zarak"
+          REGISTRY: "us-central1-docker.pkg.dev/lavanet-testnet/growth-testnet-us-central1/bd-ui-testnet"
           IMAGE_TAG: ${{ github.sha }}
           NOW: ${{ env.NOW }}
         run: |
